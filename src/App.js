@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 // Import stylesheet
 import './App.css'
 // Import Components
-import MyButton from "./components/MyButton";
+import MyButton from "./MyButton";
 import ProfileCard from "./components/ProfileCard";
 // Import fake database
 import profiles from "./fakeData";
