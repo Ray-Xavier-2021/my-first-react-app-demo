@@ -1,6 +1,6 @@
 // THIS FILE IS USED TO DISPLAY THE APP
 // import React
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // Import stylesheet
 import './App.css'
 // Import Components
@@ -57,13 +57,39 @@ export default function App () {
   const [count, setCount] = useState(0)
   // Increment state variable 👉 setCount(count + 1)
 
+  // Set state for full name
+  const [fullname, setFullname] = useState('WAITING FOR DATA')
+
   // styled component
   const myStyle = {
     color: 'red'
   }
+
+  // Create an async /await random picture generator that fetches from API dynamically
+  const getRandomName = async () => {
+    // Await fetch data
+    let response = await fetch('https://randomuser.me/api')
+    // Convert data to JSON format {object}
+    const data = await response.json()
+    // Update state of name
+    setFullname(data.results[0].name.first + ' ' + data.results[0].name.last);
+    // return first index picture
+    return data.results[0].picture.large
+  }
+
+  // useEffect makes sure code only runs once
+  // Runs once only when the page loads due to empty array dependencies
+  useEffect(() => {
+    // Call function
+    getRandomName()
+  }, [])
+
+
+
+
   return (
-    // JSX fragments: dummy parent
     <>
+      {/* JSX fragments: dummy parent */}
       {/* default state */}
       <h2 style={myStyle}>My count is {count}</h2> 
       {/* Function that changes state */}
@@ -75,7 +101,12 @@ export default function App () {
       <MyButton color='red' title='SELL 🚀' />
       {/* Access data then map data and display image*/}
       {profiles.map(profile => (
-        <ProfileCard image={profile.image} name={profile.name} title={profile.title} description={profile.description}/>
+        <ProfileCard 
+        // Rnamdom image generators
+        image={`https://robohash.org/${Math.random()}.png`}
+        name={fullname} 
+        title={profile.title} 
+        description={profile.description}/>
       ))}
     </>
   );
