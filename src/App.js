@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// THIS FILE IS USED TO DISPLAY THE APP
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Create a functional component
+// Returns HTML
+
+function App () {
+  const myAge = 39
+  console.log(myAge);
+  // JSX - writing HTML into Javascript
+  // Inline styling is done with JSX {}
+
+  return <h2 style={{color: 'red'}}>{myAge}</h2>
+
+  // how to make functional component
+  // variables
+  // console logging
+  // How to write JSX
+  // 👉 {stuuf here is JAVASCRIPT}
+  // inline styling 👉 {{key: 'value'}}
+  // JSX 👉 {put stuff in here}
 }
 
+// Export for use
 export default App;
