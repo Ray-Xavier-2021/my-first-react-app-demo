@@ -3,14 +3,12 @@
 
 This project was built by me using JSX and ReactJS. It will be added to my portfolio showcase as one of my projects. THis project was to practice API fetching in and react app, building components and creating a fake database to hold data.
 
-3. Link Heroku app to README.MD
-- `[Live Heroku Deployment](heroku.url.link)`
+[Live Nelify Deployment](![profile-card](https://user-images.githubusercontent.com/78431899/190513007-ba58c03a-3298-40ac-acda-dccdc7d851ad.png))
 
-[Live Nelify Deployment](https://twitter-clone-horatio.herokuapp.com/)
-
-![Screenshot placeholder] (twitter_clone_app.png)
+![profile-card](https://user-images.githubusercontent.com/78431899/190513007-ba58c03a-3298-40ac-acda-dccdc7d851ad.png)
 
 ## Technologies Used
+
 * CSS
 * JS
 * JSX
